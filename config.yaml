@@ -1,0 +1,24 @@
+data_dir: "data/filtered_gene_bc_matrices/hg19"
+output_dir: "results"
+
+scripts:
+  setup: "scripts/setup_and_initialization.R"
+  qc: "scripts/qc_and_preprocessing.R"
+  normalization: "scripts/normalization_and_feature_selection.R"
+  scaling: "scripts/scaling_and_pca.R"
+  clustering: "scripts/clustering_and_umap.R"
+  markers: "scripts/differential_markers_and_visualization.R"
+
+outputs:
+  initial: "{output_dir}/pbmc_initial.rds"
+  preprocessed: "{output_dir}/pbmc_preprocessed.rds"
+  normalized: "{output_dir}/pbmc_normalized.rds"
+  pca: "{output_dir}/pbmc_pca.rds"
+  umap: "{output_dir}/pbmc_umap.rds"
+  cluster_markers: "{output_dir}/cluster_markers.rds"
+  umap_plot: "{output_dir}/pbmc3k_umap.jpg"
+
+#thresholds:
+  #avg_log2FC: 0.5
+  #clustering_resolution: 0.8
+

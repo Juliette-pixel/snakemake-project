@@ -1,0 +1,23 @@
+name: scRNA-seq
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - r-base=4.2.1
+  - r-dplyr
+  - r-ggplot2
+  - r-seurat
+  - r-data.table
+  - r-matrix
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib-base
+  - seaborn
+  - snakemake
+  - pip
+  - pip:
+      - scanpy
+      - anndata
